@@ -3,6 +3,7 @@ import "package:flutter/material.dart";
 // cust widgets
 import "package:timeswappers/constants.dart";
 import "../../wigets/DrawerWidget.dart";
+import "./dashboard_circle.dart";
 
 class HomeScreen extends StatefulWidget {
   @override
@@ -224,7 +225,32 @@ class _HomeScreenState extends State<HomeScreen> {
                       ),
                       margin: EdgeInsets.symmetric(vertical: 10)),
                   Container(
-                    child: Text("Dashboard "),
+                    child: Column(
+                      children: [
+                        // Circles
+                        Row(
+                          children: [
+                            DashboardCircle(
+                              dashNumber: 12,
+                              dashString: "Total Views on Profile",
+                            ),
+                            DashboardCircle(
+                              dashNumber: 10,
+                              dashString: "Total Views on Profile",
+                            ),
+                            DashboardCircle(
+                              dashNumber: 4,
+                              dashString: "Total Views on Profile",
+                            ),
+                            DashboardCircle(
+                              dashNumber: 8,
+                              dashString: "Total Views on Profile",
+                            ),
+                          ],
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        )
+                      ],
+                    ),
                     padding: EdgeInsets.all(10),
                     width: double.infinity,
                     margin: EdgeInsets.symmetric(horizontal: 10),
